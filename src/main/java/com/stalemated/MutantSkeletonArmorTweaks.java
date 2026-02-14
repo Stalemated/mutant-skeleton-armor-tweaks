@@ -12,6 +12,7 @@ public class MutantSkeletonArmorTweaks implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		MutantSkeletonArmorConfig.load();
 		LOGGER.info("Mutant Skeleton Armor Tweaks loaded successfully!");
 	}
 }
