@@ -28,7 +28,7 @@ public class MutantSkeletonArmorMixin {
 					ordinal = 1 // useItem.getItem() check
 			)
 	)
-	private static Item allowRangedWeaponsInCheck(ItemStack instance) {
+	private static Item toggleChestplateTweaks(ItemStack instance) {
 		Item checkedItem = instance.getItem();
 
 		// Draw speed feature disabled
@@ -54,7 +54,7 @@ public class MutantSkeletonArmorMixin {
 					target = "Lnet/minecraft/world/entity/player/Player;getItemBySlot(Lnet/minecraft/world/entity/EquipmentSlot;)Lnet/minecraft/world/item/ItemStack;"
 			)
 	)
-	private static ItemStack disableSkullMultishot(Player player, EquipmentSlot slot) {
+	private static ItemStack toggleSkullMultishot(Player player, EquipmentSlot slot) {
 		ItemStack realItemStack = player.getItemBySlot(slot.HEAD);
 
 		if (player.getItemBySlot(slot.HEAD).getItem() == ModRegistry.MUTANT_SKELETON_SKULL_ITEM.get() && !MutantSkeletonArmorConfig.enableSkullMultishot) {
