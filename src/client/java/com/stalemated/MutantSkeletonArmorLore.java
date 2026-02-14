@@ -17,7 +17,7 @@ public class MutantSkeletonArmorLore implements ClientModInitializer {
 
                 case "mutantmonsters:mutant_skeleton_skull":
                     lines.add(Component.empty());
-                    lines.add(Component.literal("Unlocks a special multishot attack").withStyle(ChatFormatting.GREEN));
+                    lines.add(Component.literal("Unlocks a special Multishot for Bows").withStyle(ChatFormatting.GREEN));
                     break;
 
                 case "mutantmonsters:mutant_skeleton_chestplate":
