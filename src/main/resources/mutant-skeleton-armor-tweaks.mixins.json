@@ -3,7 +3,8 @@
 	"package": "com.stalemated.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"MutantSkeletonArmorMixin"
+		"MutantSkeletonArmorMixin",
+		"MutantSkeletonArmorItemMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
