@@ -14,25 +14,35 @@ public class MutantSkeletonArmorLore implements ClientModInitializer {
             String itemId = BuiltInRegistries.ITEM.getKey(stack.getItem()).toString();
 
             switch (itemId) {
-
                 case "mutantmonsters:mutant_skeleton_skull":
-                    lines.add(Component.empty());
-                    lines.add(Component.literal("Unlocks a special Multishot for Bows").withStyle(ChatFormatting.GREEN));
+                    if (MutantSkeletonArmorConfig.enableSkullMultishot) {
+                        lines.add(Component.empty());
+                        lines.add(Component.literal("Unlocks a special Multishot for Bows").withStyle(ChatFormatting.GREEN));
+                    }
                     break;
 
                 case "mutantmonsters:mutant_skeleton_chestplate":
-                    lines.add(Component.empty());
-                    lines.add(Component.literal("Increases draw speed for Ranged Weapons").withStyle(ChatFormatting.GREEN));
+                    if (MutantSkeletonArmorConfig.enableChestplateCrossbowTweak && MutantSkeletonArmorConfig.enableChestplateDrawSpeed) {
+                        lines.add(Component.empty());
+                        lines.add(Component.literal("Increases draw speed for Ranged Weapons").withStyle(ChatFormatting.GREEN));
+                    } else if (MutantSkeletonArmorConfig.enableChestplateDrawSpeed) {
+                        lines.add(Component.empty());
+                        lines.add(Component.literal("Increases draw speed for Bows").withStyle(ChatFormatting.GREEN));
+                    }
                     break;
 
                 case "mutantmonsters:mutant_skeleton_leggings":
-                    lines.add(Component.empty());
-                    lines.add(Component.literal("Increases movement speed").withStyle(ChatFormatting.GREEN));
+                    if (MutantSkeletonArmorConfig.enableLeggingsEffect) {
+                        lines.add(Component.empty());
+                        lines.add(Component.literal("Increases movement speed").withStyle(ChatFormatting.GREEN));
+                    }
                     break;
 
                 case "mutantmonsters:mutant_skeleton_boots":
-                    lines.add(Component.empty());
-                    lines.add(Component.literal("Increases jump height").withStyle(ChatFormatting.GREEN));
+                        if (MutantSkeletonArmorConfig.enableBootsEffect) {
+                        lines.add(Component.empty());
+                        lines.add(Component.literal("Increases jump height").withStyle(ChatFormatting.GREEN));
+                    }
                     break;
             }
         });
