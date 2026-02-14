@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "mutant-skeleton-armor-tweaks",
+	"version": "${version}",
+	"name": "Mutant Skeleton Armor Tweaks",
+	"description": "Adds crossbow compatibility to the mutant skeleton chestplate. Designed for the Prominence II modpack.",
+	"authors": [
+		"Stalemated"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/mutant-skeleton-armor-tweaks/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.stalemated.MutantSkeletonArmorTweaks"
+		],
+		"client": [
+			"com.stalemated.MutantSkeletonChestplateLore"
+		]
+	},
+	"mixins": [
+		"mutant-skeleton-armor-tweaks.mixins.json",
+		{
+			"config": "mutant-skeleton-armor-tweaks.mixins.json",
+			"environment": "server"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.18.3",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	}
+}
