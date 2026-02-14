@@ -3,7 +3,7 @@
 	"id": "mutant-skeleton-armor-tweaks",
 	"version": "${version}",
 	"name": "Mutant Skeleton Armor Tweaks",
-	"description": "Adds crossbow compatibility to the mutant skeleton chestplate. Designed for the Prominence II modpack.",
+	"description": "Adds crossbow compatibility to the mutant skeleton chestplate.",
 	"authors": [
 		"Stalemated"
 	],
