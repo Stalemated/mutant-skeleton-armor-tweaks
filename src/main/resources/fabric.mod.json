@@ -19,7 +19,7 @@
 			"com.stalemated.MutantSkeletonArmorTweaks"
 		],
 		"client": [
-			"com.stalemated.MutantSkeletonChestplateLore"
+			"com.stalemated.MutantSkeletonArmorLore"
 		]
 	},
 	"mixins": [
