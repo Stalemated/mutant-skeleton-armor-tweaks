@@ -8,8 +8,8 @@
 		"Stalemated"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "",
+		"sources": "https://github.com/Stalemated/mutant-skeleton-armor-tweaks"
 	},
 	"license": "MIT",
 	"icon": "assets/mutant-skeleton-armor-tweaks/icon.png",
