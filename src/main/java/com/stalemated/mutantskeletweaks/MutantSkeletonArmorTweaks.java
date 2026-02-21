@@ -1,4 +1,4 @@
-package com.stalemated;
+package com.stalemated.mutantskeletweaks;
 
 import net.fabricmc.api.ModInitializer;
 

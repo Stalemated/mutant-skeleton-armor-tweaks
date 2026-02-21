@@ -16,10 +16,10 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.stalemated.MutantSkeletonArmorTweaks"
+			"com.stalemated.mutantskeletweaks.MutantSkeletonArmorTweaks"
 		],
 		"client": [
-			"com.stalemated.MutantSkeletonArmorLore"
+			"com.stalemated.mutantskeletweaks.MutantSkeletonArmorLore"
 		]
 	},
 	"mixins": [

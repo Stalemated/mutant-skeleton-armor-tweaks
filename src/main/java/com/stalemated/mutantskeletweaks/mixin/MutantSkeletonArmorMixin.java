@@ -1,6 +1,6 @@
-package com.stalemated.mixin;
+package com.stalemated.mutantskeletweaks.mixin;
 
-import com.stalemated.MutantSkeletonArmorConfig;
+import com.stalemated.mutantskeletweaks.MutantSkeletonArmorConfig;
 import fuzs.mutantmonsters.init.ModRegistry;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;

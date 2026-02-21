@@ -1,6 +1,6 @@
-package com.stalemated;
+package com.stalemated.mutantskeletweaks;
 
-import com.stalemated.config.ConfigManager;
+import com.stalemated.mutantskeletweaks.config.ConfigManager;
 
 public class MutantSkeletonArmorConfig {
     public static boolean enableSkullMultishot;

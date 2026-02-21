@@ -1,4 +1,4 @@
-package com.stalemated.config;
+package com.stalemated.mutantskeletweaks.config;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

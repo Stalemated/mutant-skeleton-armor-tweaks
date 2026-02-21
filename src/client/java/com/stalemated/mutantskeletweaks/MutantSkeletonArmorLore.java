@@ -1,4 +1,4 @@
-package com.stalemated;
+package com.stalemated.mutantskeletweaks;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.item.v1.ItemTooltipCallback;
