@@ -23,11 +23,7 @@
 		]
 	},
 	"mixins": [
-		"mutant-skeleton-armor-tweaks.mixins.json",
-		{
-			"config": "mutant-skeleton-armor-tweaks.mixins.json",
-			"environment": "server"
-		}
+		"mutant-skeleton-armor-tweaks.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.18.3",
