@@ -3,8 +3,11 @@
 	"package": "com.stalemated.mutantskeletweaks.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
+		"EnchantmentHelperMixin",
+		"EnchantmentMixin",
+		"MutantSkeletonArmorItemMixin",
 		"MutantSkeletonArmorMixin",
-		"MutantSkeletonArmorItemMixin"
+		"MutantSkeletonSkullMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
