@@ -7,8 +7,9 @@ import net.minecraft.world.item.ArmorItem;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
+import fuzs.mutantmonsters.world.item.SkeletonArmorItem;
 
-@Mixin(targets = "fuzs.mutantmonsters.world.item.SkeletonArmorItem")
+@Mixin(SkeletonArmorItem.class)
 public class MutantSkeletonArmorItemMixin {
     @Redirect(
             method = "inventoryTick",

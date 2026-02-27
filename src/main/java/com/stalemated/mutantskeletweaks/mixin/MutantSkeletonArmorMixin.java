@@ -14,8 +14,9 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
+import fuzs.mutantmonsters.handler.PlayerEventsHandler;
 
-@Mixin(targets = "fuzs.mutantmonsters.handler.PlayerEventsHandler")
+@Mixin(PlayerEventsHandler.class)
 public class MutantSkeletonArmorMixin {
 	@Unique
 	private static final TagKey<Item> RANGED_WEAPON_TAG = TagKey.create(Registries.ITEM, new ResourceLocation("c", "ranged_weapons"));
@@ -55,9 +56,9 @@ public class MutantSkeletonArmorMixin {
 			)
 	)
 	private static ItemStack toggleSkullMultishot(Player player, EquipmentSlot slot) {
-		ItemStack realItemStack = player.getItemBySlot(slot.HEAD);
+		ItemStack realItemStack = player.getItemBySlot(EquipmentSlot.HEAD);
 
-		if (player.getItemBySlot(slot.HEAD).getItem() == ModRegistry.MUTANT_SKELETON_SKULL_ITEM.get() && !MutantSkeletonArmorConfig.enableSkullMultishot) {
+		if (player.getItemBySlot(EquipmentSlot.HEAD).getItem() == ModRegistry.MUTANT_SKELETON_SKULL_ITEM.get() && !MutantSkeletonArmorConfig.enableSkullMultishot) {
 			return ItemStack.EMPTY;
 		}
 
