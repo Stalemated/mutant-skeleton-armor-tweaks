@@ -35,7 +35,7 @@ public abstract class SmithingMenuEldritchCompatMixin {
             return;
         }
         if ((Object) this instanceof SmithingMenu menu) {
-
+            ItemStack item = menu.getSlot(1).getItem();
             ItemStack result = menu.getSlot(3).getItem();
 
             if (!result.isEmpty() && result.hasTag() && result.getItem() instanceof ArmorBlockItem) {
@@ -59,10 +59,10 @@ public abstract class SmithingMenuEldritchCompatMixin {
 
                     // Restore old attributes
                     if (changed) {
-                        Multimap<Attribute, AttributeModifier> defaultAttributeModifiers = result.getItem().getDefaultAttributeModifiers(correctSlot); // maybe cambiar esto si tierify se pone loco
+                        Multimap<Attribute, AttributeModifier> attributeModifiers = item.getItem().getAttributeModifiers(item, correctSlot); //
 
                         // Iterate through all default attributes
-                        for (Map.Entry<Attribute, AttributeModifier> entry : defaultAttributeModifiers.entries()) {
+                        for (Map.Entry<Attribute, AttributeModifier> entry : attributeModifiers.entries()) {
                             boolean hasAttribute = false;
                             String attributeName = BuiltInRegistries.ATTRIBUTE.getKey(entry.getKey()).toString();
 
