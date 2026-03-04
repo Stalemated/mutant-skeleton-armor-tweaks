@@ -11,7 +11,6 @@ import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 
 import elocindev.eldritch_end.api.infusion.InfusableItemMaterial;
-import elocindev.eldritch_end.api.infusion.InfusionTemplate;
 import fuzs.mutantmonsters.init.ModRegistry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.nbt.CompoundTag;
