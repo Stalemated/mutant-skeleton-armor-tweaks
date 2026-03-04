@@ -1,0 +1,12 @@
+{
+    "required": false,
+    "package": "com.stalemated.mutantskeletweaks.mixin.compat",
+    "plugin": "com.stalemated.mutantskeletweaks.mixin.CompatMixinConfigPlugin",
+    "compatibilityLevel": "JAVA_17",
+    "mixins": [
+        "SmithingMenuEldritchCompatMixin"
+    ],
+    "injectors": {
+        "defaultRequire": 1
+    }
+}

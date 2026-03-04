@@ -34,7 +34,17 @@ repositories {
 		url = 'https://maven.ladysnake.org/releases'
 	}
 	maven { url 'https://jitpack.io' }
-
+	exclusiveContent {
+		forRepository {
+			maven {
+				name = "Modrinth"
+				url = "https://api.modrinth.com/maven"
+			}
+		}
+		filter {
+			includeGroup "maven.modrinth"
+		}
+	}
 }
 
 loom {
