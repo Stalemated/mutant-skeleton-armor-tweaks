@@ -77,8 +77,7 @@ dependencies {
 	modImplementation "dev.onyxstudios.cardinal-components-api:cardinal-components-entity:${project.cardinal_components_api_version}"
 	modImplementation fileTree(dir: 'libs', include: ['*.jar'])
 	//modImplementation 'com.github.Fuzss:puzzlesaccessapi:main-SNAPSHOT'
-
-
+	modCompileOnly fileTree(dir: 'compile_libs', include: ['*.jar'])
 }
 
 processResources {
