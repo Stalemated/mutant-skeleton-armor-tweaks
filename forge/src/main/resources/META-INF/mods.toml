@@ -1,6 +1,6 @@
 modLoader = "javafml"
 loaderVersion = "[47,)"
-#issueTrackerURL = ""
+issueTrackerURL = "https://github.com/Stalemated/mutant-skeleton-armor-tweaks/issues"
 license = "MIT"
 
 [[mods]]
@@ -12,6 +12,7 @@ description = '''
 Adds crossbow compatibility to the mutant skeleton chestplate. Also makes all effects toggleable.
 '''
 logoFile = "assets/icon.png"
+displayURL = "https://www.curseforge.com/minecraft/mc-mods/mutant-skeleton-armor-tweaks"
 
 [[mixins]]
 config = "msat.mixins.json"
@@ -29,3 +30,24 @@ mandatory = true
 versionRange = "[1.20.1,)"
 ordering = "NONE"
 side = "BOTH"
+
+[[dependencies.mutant-skeleton-armor-tweaks]]
+modId = "yet_another_config_lib_v3"
+mandatory = true
+versionRange = "[3.6.6,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.mutant-skeleton-armor-tweaks]]
+modId = "s_lib"
+mandatory = true
+versionRange = "[2.0.0,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.mutant-skeleton-armor-tweaks]]
+modId = "customtooltips"
+mandatory = false
+versionRange = "[5.1.0+1.20.1,)"
+ordering = "NONE"
+side = "CLIENT"
