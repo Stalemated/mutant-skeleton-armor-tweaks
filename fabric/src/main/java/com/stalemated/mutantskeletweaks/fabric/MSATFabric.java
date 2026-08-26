@@ -12,8 +12,7 @@ public final class MSATFabric implements ModInitializer {
     public void onInitialize() {
         MutantSkeletonArmorTweaks.init();
 
-        ServerPlayConnectionEvents.JOIN.register((handler, sender, server) -> {
-            MSATNetworkHandler.sendConfigToPlayer(handler.player);
-        });
+        ServerPlayConnectionEvents.JOIN.register((handler, sender, server) ->
+                MSATNetworkHandler.sendConfigToPlayer(handler.player));
     }
 }

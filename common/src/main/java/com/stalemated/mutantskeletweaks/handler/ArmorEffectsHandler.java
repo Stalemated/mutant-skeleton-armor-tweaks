@@ -1,7 +1,6 @@
 package com.stalemated.mutantskeletweaks.handler;
 
 import com.stalemated.mutantskeletweaks.config.ConfigManager;
-import fuzs.mutantmonsters.init.ModRegistry;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ArmorItem;

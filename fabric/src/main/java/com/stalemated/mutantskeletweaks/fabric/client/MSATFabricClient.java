@@ -10,8 +10,7 @@ public final class MSATFabricClient implements ClientModInitializer {
     public void onInitializeClient() {
         MSATClient.init();
 
-        ClientPlayConnectionEvents.DISCONNECT.register((handler, client) -> {
-            MSATNetworkHandler.clearServerConfig();
-        });
+        ClientPlayConnectionEvents.DISCONNECT.register((handler, client) ->
+                MSATNetworkHandler.clearServerConfig());
     }
 }
