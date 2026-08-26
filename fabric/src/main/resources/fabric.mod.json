@@ -8,8 +8,9 @@
     "Stalemated"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/Stalemated/mutant-skeleton-armor-tweaks"
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/mutant-skeleton-armor-tweaks",
+    "sources": "https://github.com/Stalemated/mutant-skeleton-armor-tweaks",
+    "issues": "https://github.com/Stalemated/mutant-skeleton-armor-tweaks/issues"
   },
   "license": "MIT",
   "icon": "assets/icon.png",

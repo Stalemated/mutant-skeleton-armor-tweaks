@@ -8,19 +8,19 @@
   "msat.config_screen.op_required": "\n§4§lWarning:§r §cYou must be a server operator to edit this.§r",
   
   "msat.config_screen.enable_skull_multishot": "Enable Skull Multishot",
-  "msat.config_screen.enable_skull_multishot.description": "Enable the multishot ability when wearing the §6Mutant Skeleton Skull§r.",
+  "msat.config_screen.enable_skull_multishot.description": "Enable the multishot ability when wearing the §6Mutant Skeleton Skull§r.\n\n§7This ability enables multishot for bows, with arrows being shot with a tighter spread than the multishot enchant for crossbows.§r",
   
   "msat.config_screen.enable_chestplate_draw_speed": "Enable Chestplate Draw Speed",
   "msat.config_screen.enable_chestplate_draw_speed.description": "Enable faster bow draw speed when wearing the §6Mutant Skeleton Chestplate§r.",
   
-  "msat.config_screen.enable_chestplate_crossbow_tweak": "Enable Chestplate Crossbow Tweak",
-  "msat.config_screen.enable_chestplate_crossbow_tweak.description": "Enable the crossbow tweaks when wearing the §6Mutant Skeleton Chestplate§r.",
+  "msat.config_screen.enable_chestplate_crossbow_compat": "Enable Chestplate Crossbow Compatibility",
+  "msat.config_screen.enable_chestplate_crossbow_compat.description": "Enables crossbows to be compatible with the §6Mutant Skeleton Chestplate's§r faster draw speed §c(if enabled)§r when wearing it.",
   
   "msat.config_screen.enable_leggings_effect": "Enable Leggings Effect",
-  "msat.config_screen.enable_leggings_effect.description": "Enable jump boost when wearing the §6Mutant Skeleton Leggings§r.",
+  "msat.config_screen.enable_leggings_effect.description": "Enable Speed II when wearing the §6Mutant Skeleton Leggings§r.",
   
   "msat.config_screen.enable_boots_effect": "Enable Boots Effect",
-  "msat.config_screen.enable_boots_effect.description": "Enable speed when wearing the §6Mutant Skeleton Boots§r.",
+  "msat.config_screen.enable_boots_effect.description": "Enable Jump Boost II when wearing the §6Mutant Skeleton Boots§r.",
 
   "msat.tooltip.speed": " II (∞)",
   "msat.tooltip.jump_boost": " II (∞)",

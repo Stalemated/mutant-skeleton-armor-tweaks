@@ -65,9 +65,9 @@ public class MSATConfigScreen {
                 .build();
 
         var chestCrossbowCompat = Option.<Boolean>createBuilder()
-                .name(Text.translatable("msat.config_screen.enable_chestplate_crossbow_tweak"))
+                .name(Text.translatable("msat.config_screen.enable_chestplate_crossbow_compat"))
                 .description(OptionDescription.of(
-                        Text.translatable("msat.config_screen.enable_chestplate_crossbow_tweak.description"),
+                        Text.translatable("msat.config_screen.enable_chestplate_crossbow_compat.description"),
                         canEdit ?
                                 Text.of("") :
                                 Text.translatable("msat.config_screen.op_required")
