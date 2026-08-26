@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "mutant-skeleton-armor-tweaks",
+  "version": "${version}",
+  "name": "Mutant Skeleton Armor Tweaks",
+  "description": "Adds crossbow compatibility to the mutant skeleton chestplate. Also makes all effects toggleable.",
+  "authors": [
+    "Stalemated"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/Stalemated/mutant-skeleton-armor-tweaks"
+  },
+  "license": "MIT",
+  "icon": "assets/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.stalemated.mutantskeletweaks.fabric.MSATFabric"
+    ],
+    "client": [
+      "com.stalemated.mutantskeletweaks.fabric.client.MSATFabricClient"
+    ],
+    "modmenu": [
+      "com.stalemated.mutantskeletweaks.fabric.compat.modmenu.ModMenuIntegration"
+    ]
+  },
+  "mixins": [
+    "msat.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.10",
+    "minecraft": "~1.20.1",
+    "java": ">=17",
+    "fabric-api": "*",
+    "s_lib": ">=2.0.0+1.20.1",
+    "yet_another_config_lib_v3": ">=3.6.6"
+  },
+  "suggests": {
+    "customtooltips": "5.1.0+1.20.1"
+  }
+}

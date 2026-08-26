@@ -1,0 +1,32 @@
+{
+  "msat.config_screen.title": "Mutant Skeleton Armor Tweaks",
+  
+  "msat.config_screen.category.general": "General Config",
+  
+  "msat.config_screen.group.armor_effects": "Armor Effects",
+  "msat.config_screen.group.armor_effects.description": "Configure the armor effects provided by the Mutant Skeleton set.",
+  "msat.config_screen.op_required": "\n§4§lWarning:§r §cYou must be a server operator to edit this.§r",
+  
+  "msat.config_screen.enable_skull_multishot": "Enable Skull Multishot",
+  "msat.config_screen.enable_skull_multishot.description": "Enable the multishot ability when wearing the §6Mutant Skeleton Skull§r.",
+  
+  "msat.config_screen.enable_chestplate_draw_speed": "Enable Chestplate Draw Speed",
+  "msat.config_screen.enable_chestplate_draw_speed.description": "Enable faster bow draw speed when wearing the §6Mutant Skeleton Chestplate§r.",
+  
+  "msat.config_screen.enable_chestplate_crossbow_tweak": "Enable Chestplate Crossbow Tweak",
+  "msat.config_screen.enable_chestplate_crossbow_tweak.description": "Enable the crossbow tweaks when wearing the §6Mutant Skeleton Chestplate§r.",
+  
+  "msat.config_screen.enable_leggings_effect": "Enable Leggings Effect",
+  "msat.config_screen.enable_leggings_effect.description": "Enable jump boost when wearing the §6Mutant Skeleton Leggings§r.",
+  
+  "msat.config_screen.enable_boots_effect": "Enable Boots Effect",
+  "msat.config_screen.enable_boots_effect.description": "Enable speed when wearing the §6Mutant Skeleton Boots§r.",
+
+  "msat.tooltip.speed": " II (∞)",
+  "msat.tooltip.jump_boost": " II (∞)",
+  "msat.tooltip.skull_multishot": "Enables Multishot for Bows",
+  "msat.tooltip.chestplate_draw_speed.enabled": "§a- Faster Draw Speed",
+  "msat.tooltip.chestplate_draw_speed.disabled": "§7- Faster Draw Speed",
+  "msat.tooltip.chestplate_crossbow.enabled": "§a- Crossbow compatibility",
+  "msat.tooltip.chestplate_crossbow.disabled": "§7- Crossbow compatibility"
+}

@@ -1,0 +1,30 @@
+{
+  "msat.config_screen.title": "Mutant Skeleton Armor Tweaks",
+  
+  "msat.config_screen.category.general": "Configuración General",
+  
+  "msat.config_screen.group.armor_effects": "Efectos de Armadura",
+  "msat.config_screen.group.armor_effects.description": "Configura los efectos de armadura que provee el set de Mutant Skeleton.",
+  "msat.config_screen.op_required": "\n§4§lAdvertencia:§r §cDebes ser un operador del servidor para editar esto.§r",
+  
+  "msat.config_screen.enable_skull_multishot": "Habilitar Multidisparo del Cráneo",
+  "msat.config_screen.enable_skull_multishot.description": "Habilita la habilidad de multidisparo al llevar puesta la §6Mutant Skeleton Skull§r.",
+  
+  "msat.config_screen.enable_chestplate_draw_speed": "Habilitar Velocidad de Tensado",
+  "msat.config_screen.enable_chestplate_draw_speed.description": "Habilita una mayor velocidad al tensar arcos al llevar puesto el §6Mutant Skeleton Rib Cage§r.",
+  
+  "msat.config_screen.enable_chestplate_crossbow_tweak": "Habilitar Mejoras de Ballesta",
+  "msat.config_screen.enable_chestplate_crossbow_tweak.description": "Habilita las mejoras para ballestas al llevar puesto el §6Mutant Skeleton Rib Cage§r.",
+  
+  "msat.config_screen.enable_leggings_effect": "Habilitar Efecto de Grebas",
+  "msat.config_screen.enable_leggings_effect.description": "Habilita supersalto al llevar puesto el §6Mutant Skeleton Pelvis§r.",
+  
+  "msat.config_screen.enable_boots_effect": "Habilitar Efecto de Botas",
+  "msat.config_screen.enable_boots_effect.description": "Habilita velocidad adicional al llevar puesto las §6Mutant Skeleton Boots§r.",
+
+  "msat.tooltip.speed": "Velocidad II (**:**)",
+  "msat.tooltip.jump_boost": "Supersalto II (**:**)",
+  "msat.tooltip.skull_multishot": "Multidisparo Concentrado",
+  "msat.tooltip.chestplate_draw_speed": "Mayor Velocidad de Tensado",
+  "msat.tooltip.chestplate_crossbow": "Compatibilidad con Ballestas"
+}

@@ -1,0 +1,32 @@
+architectury {
+    common rootProject.enabled_platforms.split(',')
+}
+
+loom {
+    mixin {
+        useLegacyMixinAp = true
+        defaultRefmapName = "msat-common.refmap.json"
+    }
+}
+
+dependencies {
+    // We depend on Fabric Loader here to use the Fabric @Environment annotations,
+    // which get remapped to the correct annotations on each platform.
+    // Do NOT use other classes from Fabric Loader.
+    modImplementation "net.fabricmc:fabric-loader:$rootProject.fabric_loader_version"
+
+    // S-Lib common code
+    modImplementation("com.stalemated.lib:s-lib-common:${rootProject.s_lib_version}")
+    // Custom Tooltip API
+    modImplementation("com.stalemated.cta:custom_tooltip_api-common:${rootProject.cta_version}")
+
+    // YACL
+    modImplementation "dev.isxander:yet-another-config-lib:${rootProject.yacl_version}-fabric"
+
+    // Mutant Monsters + Puzzles Lib
+    modImplementation "curse.maven:mutant-monsters-852665:${rootProject.mutant_monsters_file_id_fabric}"
+    modImplementation "maven.modrinth:QAGBst4M:${rootProject.puzzles_lib_file_id_fabric}"
+
+    // Eldritch End
+    modCompileOnly "elocindev.eldritch_end:Eldritch_End:0.3.5"
+}
