@@ -1,6 +1,6 @@
 package com.stalemated.mutantskeletweaks.forge.client;
 
-import com.stalemated.mutantskeletweaks.MSATClient;
+import com.stalemated.mutantskeletweaks.client.MSATClient;
 import net.minecraftforge.client.event.ClientPlayerNetworkEvent;
 import net.minecraftforge.common.MinecraftForge;
 import com.stalemated.mutantskeletweaks.network.MSATNetworkHandler;

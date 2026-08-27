@@ -1,7 +1,6 @@
-package com.stalemated.mutantskeletweaks;
+package com.stalemated.mutantskeletweaks.client;
 
 import com.stalemated.lib.helper.PlatformHelper;
-import com.stalemated.mutantskeletweaks.client.MSATTooltips;
 
 public final class MSATClient {
     public static void init() {

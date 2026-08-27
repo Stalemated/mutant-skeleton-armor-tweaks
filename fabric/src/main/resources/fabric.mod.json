@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "mutant-skeleton-armor-tweaks",
+  "id": "mutant_skeleton_armor_tweaks",
   "version": "${version}",
   "name": "Mutant Skeleton Armor Tweaks",
   "description": "Adds crossbow compatibility to the mutant skeleton chestplate. Also makes all effects toggleable.",

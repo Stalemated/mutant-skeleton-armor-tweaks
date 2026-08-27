@@ -4,7 +4,7 @@ issueTrackerURL = "https://github.com/Stalemated/mutant-skeleton-armor-tweaks/is
 license = "MIT"
 
 [[mods]]
-modId = "mutant-skeleton-armor-tweaks"
+modId = "mutant_skeleton_armor_tweaks"
 version = "${version}"
 displayName = "Mutant Skeleton Armor Tweaks"
 authors = "Stalemated"
@@ -17,35 +17,35 @@ displayURL = "https://www.curseforge.com/minecraft/mc-mods/mutant-skeleton-armor
 [[mixins]]
 config = "msat.mixins.json"
 
-[[dependencies.mutant-skeleton-armor-tweaks]]
+[[dependencies.mutant_skeleton_armor_tweaks]]
 modId = "forge"
 mandatory = true
 versionRange = "[47,)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.mutant-skeleton-armor-tweaks]]
+[[dependencies.mutant_skeleton_armor_tweaks]]
 modId = "minecraft"
 mandatory = true
 versionRange = "[1.20.1,)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.mutant-skeleton-armor-tweaks]]
+[[dependencies.mutant_skeleton_armor_tweaks]]
 modId = "yet_another_config_lib_v3"
 mandatory = true
 versionRange = "[3.6.6,)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.mutant-skeleton-armor-tweaks]]
+[[dependencies.mutant_skeleton_armor_tweaks]]
 modId = "s_lib"
 mandatory = true
 versionRange = "[2.0.0,)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.mutant-skeleton-armor-tweaks]]
+[[dependencies.mutant_skeleton_armor_tweaks]]
 modId = "customtooltips"
 mandatory = false
 versionRange = "[5.1.0+1.20.1,)"

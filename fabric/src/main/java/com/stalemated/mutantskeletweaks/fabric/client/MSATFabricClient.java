@@ -1,6 +1,6 @@
 package com.stalemated.mutantskeletweaks.fabric.client;
 
-import com.stalemated.mutantskeletweaks.MSATClient;
+import com.stalemated.mutantskeletweaks.client.MSATClient;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayConnectionEvents;
 import com.stalemated.mutantskeletweaks.network.MSATNetworkHandler;
