@@ -46,7 +46,7 @@ public class ArmorEffectsHandler {
     public static ItemStack getSkullStack(PlayerEntity player) {
         ItemStack realItemStack = player.getEquippedStack(EquipmentSlot.HEAD);
 
-        if (realItemStack.isOf(skullItem) && ConfigManager.getActiveConfig().enableSkullMultishot) {
+        if (realItemStack.isOf(skullItem) && !ConfigManager.getActiveConfig().enableSkullMultishot) {
             return ItemStack.EMPTY;
         }
 
