@@ -19,8 +19,6 @@ public abstract class EnchantmentMixin {
 
     @Inject(method = "isAcceptableItem", at = @At("HEAD"), cancellable = true)
     private void allowMutantSkullEnchantments(ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
-        if (ArmorEnchantabilityHelper.enchantabilityConditions(target, stack.getItem())) {
-            cir.setReturnValue(true);
-        }
+        ArmorEnchantabilityHelper.allowMutantSkullEnchantments(target, stack, cir);
     }
 }
