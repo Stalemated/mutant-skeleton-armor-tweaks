@@ -1,7 +1,6 @@
 package com.stalemated.mutantskeletweaks.gui.screen;
 
 import com.stalemated.mutantskeletweaks.config.ConfigManager;
-import com.stalemated.mutantskeletweaks.config.MSATConfig;
 import com.stalemated.mutantskeletweaks.helper.PermissionsHelper;
 import dev.isxander.yacl3.api.ConfigCategory;
 import dev.isxander.yacl3.api.Option;
@@ -28,7 +27,6 @@ public class MSATConfigScreen {
     private static OptionGroup createOptionsGroup() {
 
         boolean canEdit = PermissionsHelper.canEditConfig();
-        MSATConfig config = ConfigManager.getActiveConfig();
 
         var skullMultishot = Option.<Boolean>createBuilder()
                 .name(Text.translatable("msat.config_screen.enable_skull_multishot"))
@@ -40,8 +38,13 @@ public class MSATConfigScreen {
                 ))
                 .binding(
                         true,
-                        () -> config.enableSkullMultishot,
-                        val -> { if(canEdit) ConfigManager.getLocalConfig().enableSkullMultishot = val;}
+                        () -> ConfigManager.getActiveConfig().enableSkullMultishot,
+                        val -> { 
+                            if(canEdit) {
+                                ConfigManager.getLocalConfig().enableSkullMultishot = val;
+                                if (ConfigManager.serverConfig != null) ConfigManager.serverConfig.enableSkullMultishot = val;
+                            }
+                        }
                 )
                 .controller(TickBoxControllerBuilder::create)
                 .available(canEdit)
@@ -57,8 +60,13 @@ public class MSATConfigScreen {
                 ))
                 .binding(
                         true,
-                        () -> config.enableChestplateDrawSpeed,
-                        val -> { if(canEdit) ConfigManager.getLocalConfig().enableChestplateDrawSpeed = val; }
+                        () -> ConfigManager.getActiveConfig().enableChestplateDrawSpeed,
+                        val -> { 
+                            if(canEdit) {
+                                ConfigManager.getLocalConfig().enableChestplateDrawSpeed = val; 
+                                if (ConfigManager.serverConfig != null) ConfigManager.serverConfig.enableChestplateDrawSpeed = val;
+                            }
+                        }
                 )
                 .controller(TickBoxControllerBuilder::create)
                 .available(canEdit)
@@ -74,8 +82,13 @@ public class MSATConfigScreen {
                 ))
                 .binding(
                         true,
-                        () -> config.enableChestplateCrossbowTweak,
-                        val -> { if(canEdit) ConfigManager.getLocalConfig().enableChestplateCrossbowTweak = val; }
+                        () -> ConfigManager.getActiveConfig().enableChestplateCrossbowTweak,
+                        val -> { 
+                            if(canEdit) {
+                                ConfigManager.getLocalConfig().enableChestplateCrossbowTweak = val; 
+                                if (ConfigManager.serverConfig != null) ConfigManager.serverConfig.enableChestplateCrossbowTweak = val;
+                            }
+                        }
                 )
                 .controller(TickBoxControllerBuilder::create)
                 .available(canEdit)
@@ -91,8 +104,13 @@ public class MSATConfigScreen {
                 ))
                 .binding(
                         true,
-                        () -> config.enableLeggingsEffect,
-                        val -> { if(canEdit) ConfigManager.getLocalConfig().enableLeggingsEffect = val; }
+                        () -> ConfigManager.getActiveConfig().enableLeggingsEffect,
+                        val -> { 
+                            if(canEdit) {
+                                ConfigManager.getLocalConfig().enableLeggingsEffect = val; 
+                                if (ConfigManager.serverConfig != null) ConfigManager.serverConfig.enableLeggingsEffect = val;
+                            }
+                        }
                 )
                 .controller(TickBoxControllerBuilder::create)
                 .available(canEdit)
@@ -108,8 +126,13 @@ public class MSATConfigScreen {
                 ))
                 .binding(
                         true,
-                        () -> config.enableBootsEffect,
-                        val -> { if(canEdit) ConfigManager.getLocalConfig().enableBootsEffect = val; }
+                        () -> ConfigManager.getActiveConfig().enableBootsEffect,
+                        val -> { 
+                            if(canEdit) {
+                                ConfigManager.getLocalConfig().enableBootsEffect = val; 
+                                if (ConfigManager.serverConfig != null) ConfigManager.serverConfig.enableBootsEffect = val;
+                            }
+                        }
                 )
                 .controller(TickBoxControllerBuilder::create)
                 .available(canEdit)
