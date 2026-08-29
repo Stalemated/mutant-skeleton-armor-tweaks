@@ -15,7 +15,7 @@ public class MSATTooltips {
     public static void register() {
         // Skull
         CustomTooltipApi.builder(skullId)
-                .displayCondition(s -> ConfigManager.getActiveConfig().enableSkullMultishot)
+                .displayCondition(s -> ConfigManager.MANAGER.getActiveConfig().enableSkullMultishot)
                 .addLine(CustomTooltipApi.translate("msat.tooltip.skull_multishot"))
                 .style(TooltipStyle.SOLID)
                 .colors("#FFD700")
@@ -24,9 +24,9 @@ public class MSATTooltips {
 
         // Chestplate
         CustomTooltipApi.builder(chestId)
-                .displayCondition(s -> ConfigManager.getActiveConfig().enableChestplateDrawSpeed)
+                .displayCondition(s -> ConfigManager.MANAGER.getActiveConfig().enableChestplateDrawSpeed)
                 .dynamicText(s -> {
-                    MSATConfig config = ConfigManager.getActiveConfig();
+                    MSATConfig config = ConfigManager.MANAGER.getActiveConfig();
                     List<String> lines = new ArrayList<>();
 
                     lines.add(CustomTooltipApi.translate("msat.tooltip.chestplate_draw_speed.enabled"));
@@ -45,7 +45,7 @@ public class MSATTooltips {
 
         // Leggings
         CustomTooltipApi.builder(legsId)
-                .displayCondition(s -> ConfigManager.getActiveConfig().enableLeggingsEffect)
+                .displayCondition(s -> ConfigManager.MANAGER.getActiveConfig().enableLeggingsEffect)
                 .addLine(CustomTooltipApi.translate("effect.minecraft.speed") + CustomTooltipApi.translate("msat.tooltip.speed"))
                 .style(TooltipStyle.SOLID)
                 .colors("#5541f8")
@@ -53,7 +53,7 @@ public class MSATTooltips {
 
         // Boots
         CustomTooltipApi.builder(bootsId)
-                .displayCondition(s -> ConfigManager.getActiveConfig().enableBootsEffect)
+                .displayCondition(s -> ConfigManager.MANAGER.getActiveConfig().enableBootsEffect)
                 .addLine(CustomTooltipApi.translate("effect.minecraft.jump_boost") + CustomTooltipApi.translate("msat.tooltip.jump_boost"))
                 .style(TooltipStyle.SOLID)
                 .colors("#5541F8")

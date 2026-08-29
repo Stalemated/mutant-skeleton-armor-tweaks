@@ -1,9 +1,8 @@
 package com.stalemated.mutantskeletweaks.config;
 
-import com.google.gson.*;
-import com.stalemated.lib.config.BaseConfigManager;
 import com.stalemated.lib.config.ConfigProvider;
-import com.stalemated.mutantskeletweaks.network.MSATNetworkHandler;
+import com.stalemated.lib.config.permissions.ServerConfigPermissions;
+import com.stalemated.lib.config.SyncedConfigManager;
 import dev.isxander.yacl3.config.v2.api.ConfigClassHandler;
 import dev.isxander.yacl3.config.v2.api.serializer.GsonConfigSerializerBuilder;
 import net.minecraft.util.Identifier;
@@ -14,8 +13,7 @@ import static com.stalemated.mutantskeletweaks.MutantSkeletonArmorTweaks.LOGGER;
 
 public class ConfigManager {
 
-    private static final Path CONFIG_PATH = BaseConfigManager.buildPath("mutant_skeleton_armor_tweaks.json5");
-    public static MSATConfig serverConfig = null;
+    private static final Path CONFIG_PATH = SyncedConfigManager.buildPath("mutant_skeleton_armor_tweaks.json5");
 
     public static final ConfigClassHandler<MSATConfig> HANDLER = ConfigClassHandler.createBuilder(MSATConfig.class)
             .id(new Identifier("msat", "config"))
@@ -25,7 +23,7 @@ public class ConfigManager {
                     .build())
             .build();
 
-    private static final BaseConfigManager<MSATConfig> CONFIG = new BaseConfigManager<MSATConfig>(
+    public static final SyncedConfigManager<MSATConfig> MANAGER = new SyncedConfigManager<>(
             new ConfigProvider<MSATConfig>() {
                 @Override
                 public boolean load() {
@@ -43,38 +41,23 @@ public class ConfigManager {
                 }
             },
             CONFIG_PATH,
-            LOGGER
-    ) {};
+            LOGGER,
+            new Identifier("msat", "sync_config"),
+            MSATConfig.class,
+            ServerConfigPermissions.OP_ONLY,
+            (source, dest) -> {
+                dest.enableSkullMultishot = source.enableSkullMultishot;
+                dest.enableChestplateDrawSpeed = source.enableChestplateDrawSpeed;
+                dest.enableChestplateCrossbowTweak = source.enableChestplateCrossbowTweak;
+                dest.enableLeggingsEffect = source.enableLeggingsEffect;
+                dest.enableBootsEffect = source.enableBootsEffect;
+            }
+    );
 
     public static boolean configLoadFailed = false;
 
     public static void register() {
-        CONFIG.register();
-        configLoadFailed = CONFIG.configLoadFailed;
-    }
-
-    public static MSATConfig getLocalConfig() {
-        return CONFIG.getConfig();
-    }
-
-    /**
-     * Gets the currently active config (server config if connected to a server, local config otherwise)
-     */
-    public static MSATConfig getActiveConfig() {
-        if (serverConfig != null) {
-            return serverConfig;
-        }
-        return getLocalConfig();
-    }
-
-    public static void saveLocal() {
-        CONFIG.save();
-    }
-
-    public static void save() {
-        if (serverConfig != null) {
-            MSATNetworkHandler.sendConfigToServer(getLocalConfig());
-        }
-        CONFIG.save();
+        MANAGER.register();
+        configLoadFailed = MANAGER.configLoadFailed;
     }
 }

@@ -18,9 +18,9 @@ public class ArmorEffectsHandler {
 
     public static boolean shouldApplyEffect(ArmorItem.Type type) {
         if (type == ArmorItem.Type.BOOTS) {
-            return ConfigManager.getActiveConfig().enableBootsEffect;
+            return ConfigManager.MANAGER.getActiveConfig().enableBootsEffect;
         } else if (type == ArmorItem.Type.LEGGINGS) {
-            return ConfigManager.getActiveConfig().enableLeggingsEffect;
+            return ConfigManager.MANAGER.getActiveConfig().enableLeggingsEffect;
         }
         return true;
     }
@@ -28,11 +28,11 @@ public class ArmorEffectsHandler {
     public static Item getDrawSpeedItem(ItemStack instance) {
         Item checkedItem = instance.getItem();
 
-        if (!ConfigManager.getActiveConfig().enableChestplateDrawSpeed) {
+        if (!ConfigManager.MANAGER.getActiveConfig().enableChestplateDrawSpeed) {
             return Items.AIR;
         }
 
-        if (!ConfigManager.getActiveConfig().enableChestplateCrossbowTweak) {
+        if (!ConfigManager.MANAGER.getActiveConfig().enableChestplateCrossbowTweak) {
             return checkedItem;
         }
 
@@ -46,7 +46,7 @@ public class ArmorEffectsHandler {
     public static ItemStack getSkullStack(PlayerEntity player) {
         ItemStack realItemStack = player.getEquippedStack(EquipmentSlot.HEAD);
 
-        if (realItemStack.isOf(skullItem) && !ConfigManager.getActiveConfig().enableSkullMultishot) {
+        if (realItemStack.isOf(skullItem) && !ConfigManager.MANAGER.getActiveConfig().enableSkullMultishot) {
             return ItemStack.EMPTY;
         }
 

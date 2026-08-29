@@ -3,9 +3,9 @@ package com.stalemated.mutantskeletweaks.fabric;
 import net.fabricmc.api.ModInitializer;
 
 import com.stalemated.mutantskeletweaks.MutantSkeletonArmorTweaks;
+import com.stalemated.mutantskeletweaks.config.ConfigManager;
 
 import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
-import com.stalemated.mutantskeletweaks.network.MSATNetworkHandler;
 
 public final class MSATFabric implements ModInitializer {
     @Override
@@ -13,6 +13,6 @@ public final class MSATFabric implements ModInitializer {
         MutantSkeletonArmorTweaks.init();
 
         ServerPlayConnectionEvents.JOIN.register((handler, sender, server) ->
-                MSATNetworkHandler.sendConfigToPlayer(handler.player));
+                ConfigManager.MANAGER.sendConfigToPlayer(handler.player));
     }
 }

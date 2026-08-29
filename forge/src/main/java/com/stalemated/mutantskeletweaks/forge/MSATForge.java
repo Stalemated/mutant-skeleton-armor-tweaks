@@ -9,7 +9,7 @@ import com.stalemated.mutantskeletweaks.MutantSkeletonArmorTweaks;
 
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.player.PlayerEvent;
-import com.stalemated.mutantskeletweaks.network.MSATNetworkHandler;
+import com.stalemated.mutantskeletweaks.config.ConfigManager;
 import net.minecraft.server.network.ServerPlayerEntity;
 
 @Mod(MutantSkeletonArmorTweaks.MOD_ID)
@@ -25,7 +25,7 @@ public final class MSATForge {
 
     private void onPlayerJoin(PlayerEvent.PlayerLoggedInEvent event) {
         if (event.getEntity() instanceof ServerPlayerEntity serverPlayer) {
-            MSATNetworkHandler.sendConfigToPlayer(serverPlayer);
+            ConfigManager.MANAGER.sendConfigToPlayer(serverPlayer);
         }
     }
 }
