@@ -41,7 +41,7 @@ side = "BOTH"
 [[dependencies.mutant_skeleton_armor_tweaks]]
 modId = "s_lib"
 mandatory = true
-versionRange = "[2.0.0,)"
+versionRange = "[2.0.1,)"
 ordering = "NONE"
 side = "BOTH"
 
