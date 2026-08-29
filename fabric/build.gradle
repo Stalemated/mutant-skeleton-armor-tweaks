@@ -30,7 +30,7 @@ dependencies {
     // Fabric API. This is technically optional, but you probably want it anyway.
     modImplementation "net.fabricmc.fabric-api:fabric-api:$rootProject.fabric_api_version"
 
-    // S-Lib common code
+    // S-Lib
     modImplementation "com.stalemated.lib:s-lib-fabric:${rootProject.s_lib_version}"
     // Custom Tooltip API
     modRuntimeOnly "com.stalemated.cta:custom_tooltip_api-fabric:${rootProject.cta_version}"

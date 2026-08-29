@@ -21,11 +21,11 @@ dependencies {
     modImplementation("com.stalemated.cta:custom_tooltip_api-common:${rootProject.cta_version}")
 
     // YACL
-    modImplementation "dev.isxander:yet-another-config-lib:${rootProject.yacl_version}-fabric"
+    modCompileOnly "dev.isxander:yet-another-config-lib:${rootProject.yacl_version}-fabric"
 
     // Mutant Monsters + Puzzles Lib
-    modImplementation "curse.maven:mutant-monsters-852665:${rootProject.mutant_monsters_file_id_fabric}"
-    modImplementation "maven.modrinth:QAGBst4M:${rootProject.puzzles_lib_file_id_fabric}"
+    modCompileOnly "curse.maven:mutant-monsters-852665:${rootProject.mutant_monsters_file_id_fabric}"
+    modCompileOnly "maven.modrinth:QAGBst4M:${rootProject.puzzles_lib_file_id_fabric}"
 
     // Eldritch End
     modCompileOnly "elocindev.eldritch_end:Eldritch_End:0.3.5"
