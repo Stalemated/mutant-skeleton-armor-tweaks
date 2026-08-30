@@ -7,7 +7,7 @@
 ## Features
 
 ### In game config
-- Toggle each armor piece's default effect in its own dedicated config, or in game.
+- Toggle each armor piece's default effect in the in game config (or the config file).
 - Config is synced from servers to clients upon joining.
 - Only OPed players can modify the mod's settings in game. Singleplayer worlds are not affected by this.
 
