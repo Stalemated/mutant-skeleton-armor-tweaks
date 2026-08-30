@@ -35,7 +35,8 @@
     "java": ">=17",
     "fabric-api": "*",
     "s_lib": ">=2.1.0+1.20.1",
-    "yet_another_config_lib_v3": ">=3.6.6"
+    "yet_another_config_lib_v3": ">=3.6.6",
+    "mutantmonsters": ">=8.0.8"
   },
   "suggests": {
     "customtooltips": "5.1.0+1.20.1"
