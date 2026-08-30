@@ -6,19 +6,16 @@
 
 ## Features
 
-### Crossbow Compatibility
-- A config toggle allows the Mutant Skeleton Chestplate to buff crossbow draw speed. (Also buffs other weapons with the #c:ranged_weapons tag)
-
-### Skull NBT Handling
-- The Mutant Skeleton Skull correctly keeps its NBT tags whenever it is placed in the world and broken.
-
-### Config & Server Sync
+### In game config
 - Toggle each armor piece's default effect in its own dedicated config, or in game.
 - Config is synced from servers to clients upon joining.
 - Only OPed players can modify the mod's settings in game. Singleplayer worlds are not affected by this.
 
-### Custom Tooltips
-- Only available when **Custom Tooltip API (CTA)** is installed.
+### Crossbow compatibility
+- A config toggle allows the Mutant Skeleton Chestplate to buff crossbow draw speed. (Also buffs other weapons with the #c:ranged_weapons tag)
+
+### Custom tooltips
+- Only available when **[Custom Tooltip API](https://modrinth.com/mod/custom-tooltip-api)** is installed.
   - Effect descriptions are dynamically displayed (when the effects are active in the config) inside each armor piece's tooltip.
   - These descriptions are shown as a potion effect (legs, boots) or a line displayed when the player presses the corresponding keybind (`Shift` by default).
 
@@ -26,7 +23,7 @@
 
 ## Compatibility
 
-* **Eldritch End:** Preserves dynamic entity attribute modifiers when infusing the Mutant Skeleton Skull with either Corruption or Corruption Resistance
+* **Eldritch End:** Mutant Skeleton Skull compatible with Eldritch End's infusions.
 
 ---
 
