@@ -16,8 +16,8 @@ public class SkullDropHandler {
     public static void processSkullDrop(LootContextParameterSet.Builder builder, List<ItemStack> drops) {
         BlockEntity be = builder.getOptional(LootContextParameters.BLOCK_ENTITY);
 
-        if (be instanceof SkullWithItemTagBlockEntity skullBe) {
-            NbtCompound blockEntityNbt = skullBe.createNbt();
+        if (be instanceof SkullWithItemTagBlockEntity) {
+            NbtCompound blockEntityNbt = be.createNbt();
 
             if (blockEntityNbt.contains("ItemTag", 10)) {
                 putNbtOnDrop(blockEntityNbt, drops);
