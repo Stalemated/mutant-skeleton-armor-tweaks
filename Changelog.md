@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.0.1+1.20.1
+
+### Fix
+- Fixed Mutant Skeleton Skull crashing the game when broken
+
 ## 3.0.0+1.20.1
 
 ### Features
