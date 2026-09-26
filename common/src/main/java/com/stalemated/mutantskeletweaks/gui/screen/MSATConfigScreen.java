@@ -2,6 +2,7 @@ package com.stalemated.mutantskeletweaks.gui.screen;
 
 import com.stalemated.lib.config.permissions.ClientConfigPermissions;
 import com.stalemated.mutantskeletweaks.config.ConfigManager;
+import com.stalemated.mutantskeletweaks.config.MSATConfig;
 import dev.isxander.yacl3.api.ConfigCategory;
 import dev.isxander.yacl3.api.Option;
 import dev.isxander.yacl3.api.OptionDescription;
@@ -11,6 +12,8 @@ import dev.isxander.yacl3.api.controller.TickBoxControllerBuilder;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.text.Text;
 
+import java.util.function.Function;
+
 public class MSATConfigScreen {
     public static Screen create(Screen parent) {
         return YetAnotherConfigLib.createBuilder()
@@ -19,7 +22,6 @@ public class MSATConfigScreen {
                         .name(Text.translatable("msat.config_screen.category.general"))
                         .group(createOptionsGroup())
                         .build())
-                .save(ConfigManager.MANAGER::saveFromClient)
                 .build()
                 .generateScreen(parent);
     }
@@ -27,104 +29,35 @@ public class MSATConfigScreen {
     private static OptionGroup createOptionsGroup() {
         boolean canEdit = ClientConfigPermissions.OP_OR_SP.get();
 
-        var skullMultishot = Option.<Boolean>createBuilder()
-                .name(Text.translatable("msat.config_screen.enable_skull_multishot"))
-                .description(OptionDescription.of(
-                        Text.translatable("msat.config_screen.enable_skull_multishot.description"),
-                        canEdit ?
-                                Text.of("") :
-                                Text.translatable("msat.config_screen.op_required")
-                ))
-                .binding(
-                        true,
-                        () -> ConfigManager.MANAGER.getActiveConfig().enableSkullMultishot,
-                        val -> ConfigManager.MANAGER.updateField((cfg, v) -> cfg.enableSkullMultishot = v, val, ClientConfigPermissions.OP_OR_SP)
-                )
-                .controller(TickBoxControllerBuilder::create)
-                .available(canEdit)
-                .build();
-
-        var chestDrawSpeed = Option.<Boolean>createBuilder()
-                .name(Text.translatable("msat.config_screen.enable_chestplate_draw_speed"))
-                .description(OptionDescription.of(
-                        Text.translatable("msat.config_screen.enable_chestplate_draw_speed.description"),
-                        canEdit ?
-                                Text.of("") :
-                                Text.translatable("msat.config_screen.op_required")
-                ))
-                .binding(
-                        true,
-                        () -> ConfigManager.MANAGER.getActiveConfig().enableChestplateDrawSpeed,
-                        val -> ConfigManager.MANAGER.updateField((cfg, v) -> cfg.enableChestplateDrawSpeed = v, val, ClientConfigPermissions.OP_OR_SP)
-                )
-                .controller(TickBoxControllerBuilder::create)
-                .available(canEdit)
-                .build();
-
-        var chestCrossbowCompat = Option.<Boolean>createBuilder()
-                .name(Text.translatable("msat.config_screen.enable_chestplate_crossbow_compat"))
-                .description(OptionDescription.of(
-                        Text.translatable("msat.config_screen.enable_chestplate_crossbow_compat.description"),
-                        canEdit ?
-                                Text.of("") :
-                                Text.translatable("msat.config_screen.op_required")
-                ))
-                .binding(
-                        true,
-                        () -> ConfigManager.MANAGER.getActiveConfig().enableChestplateCrossbowTweak,
-                        val -> ConfigManager.MANAGER.updateField((cfg, v) -> cfg.enableChestplateCrossbowTweak = v, val, ClientConfigPermissions.OP_OR_SP)
-                )
-                .controller(TickBoxControllerBuilder::create)
-                .available(canEdit)
-                .build();
-
-        var legsJumpBoost = Option.<Boolean>createBuilder()
-                .name(Text.translatable("msat.config_screen.enable_leggings_effect"))
-                .description(OptionDescription.of(
-                        Text.translatable("msat.config_screen.enable_leggings_effect.description"),
-                        canEdit ?
-                                Text.of("") :
-                                Text.translatable("msat.config_screen.op_required")
-                ))
-                .binding(
-                        true,
-                        () -> ConfigManager.MANAGER.getActiveConfig().enableLeggingsEffect,
-                        val -> ConfigManager.MANAGER.updateField((cfg, v) -> cfg.enableLeggingsEffect = v, val, ClientConfigPermissions.OP_OR_SP)
-                )
-                .controller(TickBoxControllerBuilder::create)
-                .available(canEdit)
-                .build();
-
-        var bootsSpeed = Option.<Boolean>createBuilder()
-                .name(Text.translatable("msat.config_screen.enable_boots_effect"))
-                .description(OptionDescription.of(
-                        Text.translatable("msat.config_screen.enable_boots_effect.description"),
-                        canEdit ?
-                                Text.of("") :
-                                Text.translatable("msat.config_screen.op_required")
-                ))
-                .binding(
-                        true,
-                        () -> ConfigManager.MANAGER.getActiveConfig().enableBootsEffect,
-                        val -> ConfigManager.MANAGER.updateField((cfg, v) -> cfg.enableBootsEffect = v, val, ClientConfigPermissions.OP_OR_SP)
-                )
-                .controller(TickBoxControllerBuilder::create)
-                .available(canEdit)
-                .build();
-
         return OptionGroup.createBuilder()
                 .name(Text.translatable("msat.config_screen.group.armor_effects"))
                 .description(OptionDescription.of(
                         Text.translatable("msat.config_screen.group.armor_effects.description"),
-                        canEdit ?
-                                Text.of("") :
-                                Text.translatable("msat.config_screen.op_required")
+                        canEdit ? Text.empty() : Text.translatable("msat.config_screen.op_required")
                 ))
-                .option(skullMultishot)
-                .option(chestDrawSpeed)
-                .option(chestCrossbowCompat)
-                .option(legsJumpBoost)
-                .option(bootsSpeed)
+                .option(createBooleanOption("enableSkullMultishot", "enable_skull_multishot", canEdit, cfg -> cfg.enableSkullMultishot, true))
+                .option(createBooleanOption("enableChestplateDrawSpeed", "enable_chestplate_draw_speed", canEdit, cfg -> cfg.enableChestplateDrawSpeed, true))
+                .option(createBooleanOption("enableChestplateCrossbowTweak", "enable_chestplate_crossbow_compat", canEdit, cfg -> cfg.enableChestplateCrossbowTweak, true))
+                .option(createBooleanOption("enableLeggingsEffect", "enable_leggings_effect", canEdit, cfg -> cfg.enableLeggingsEffect, true))
+                .option(createBooleanOption("enableBootsEffect", "enable_boots_effect", canEdit, cfg -> cfg.enableBootsEffect, true))
+                .build();
+    }
+
+    private static Option<Boolean> createBooleanOption(String configKey, String langKeySuffix, boolean canEdit, Function<MSATConfig, Boolean> getter, boolean defaultValue) {
+        String langKey = "msat.config_screen." + langKeySuffix;
+        return Option.<Boolean>createBuilder()
+                .name(Text.translatable(langKey))
+                .description(OptionDescription.of(
+                        Text.translatable(langKey + ".description"),
+                        canEdit ? Text.empty() : Text.translatable("msat.config_screen.op_required")
+                ))
+                .binding(
+                        defaultValue,
+                        () -> getter.apply(ConfigManager.getConfig()),
+                        val -> ConfigManager.MANAGER.updateOption(configKey, val)
+                )
+                .controller(TickBoxControllerBuilder::create)
+                .available(canEdit)
                 .build();
     }
 }

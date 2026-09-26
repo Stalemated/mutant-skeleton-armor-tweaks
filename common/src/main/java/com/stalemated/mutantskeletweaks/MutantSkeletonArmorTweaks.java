@@ -10,7 +10,7 @@ public final class MutantSkeletonArmorTweaks {
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
     public static void init() {
-        ConfigManager.register();
+        ConfigManager.init();
 
         LOGGER.info("Mutant Skeleton Armor Tweaks loaded successfully!");
     }
