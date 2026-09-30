@@ -34,11 +34,12 @@
     "minecraft": "~1.20.1",
     "java": ">=17",
     "fabric-api": "*",
-    "s_lib": ">=3.0.0+1.20.1",
-    "yet_another_config_lib_v3": ">=3.6.6",
+    "s_lib": ">=3.0.1+1.20.1",
     "mutantmonsters": ">=8.0.8"
   },
   "suggests": {
-    "customtooltips": "5.1.0+1.20.1"
+    "modmenu": "*",
+    "yet_another_config_lib_v3": "*",
+    "customtooltips": ">=5.2.0+1.20.1"
   }
 }
